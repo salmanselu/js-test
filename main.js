@@ -3,7 +3,7 @@ var http = require("http");
 var count = 1;
 var main = function(req, res)
 {
-    res.write(String(i));
+    res.write(String(count));
     res.end();
     count += 1;
 }
