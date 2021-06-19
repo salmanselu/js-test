@@ -9,7 +9,7 @@ var main = function(req, res)
 
         if(q.name === 'Nafeela' || q.name === 'Salman')
         {
-            var body = "<h1>Hii" + q.name +"</h1>"
+            var body = "<h1>Hii " + q.name +"</h1>"
         }
         else
         {
