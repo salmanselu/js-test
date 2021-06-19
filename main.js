@@ -3,7 +3,7 @@ var http = require("http");
 var count = 0;
 var main = function(req, res)
 {
-    res.write(String(count));
+    res.write("Number of times this page was viewed:" + String(count));
     res.end();
     count += 0.5;
 }
