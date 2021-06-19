@@ -6,7 +6,8 @@ var main = function(req, res)
 {
     fs.readFile('login.html', function(err, data){
 
-        if(q.name === 'undefined')
+        var q = url.parse(req.url, true).query;
+        if(req.url === '/')
         {
             var body = data
         }
@@ -20,7 +21,7 @@ var main = function(req, res)
         res.end();
         
     });
-    var q = url.parse(req.url, true).query;
+    
 }
 
 http.createServer(main).listen(process.env.PORT);
