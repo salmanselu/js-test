@@ -8,4 +8,4 @@ var main = function(req, res)
     count += 1;
 }
 
-http.createServer(main).listen(4200);
+http.createServer(main).listen(process.env.PORT);
