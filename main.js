@@ -6,7 +6,7 @@ var main = function(req, res)
 {
     fs.readFile('login.html', function(err, data){
 
-        if(q.name === '/')
+        if(q.name === 'undefined')
         {
             var body = data
         }
