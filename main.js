@@ -1,11 +1,11 @@
 var http = require("http");
 
-var count = 1;
+var count = 0;
 var main = function(req, res)
 {
     res.write(String(count));
     res.end();
-    count += 1;
+    count += 0.5;
 }
 
 http.createServer(main).listen(process.env.PORT);
