@@ -5,15 +5,15 @@ var url = require('url');
 var count = 0;
 var main = function(req, res)
 {
-    fs.readFile('index.html', function(err, data){
+    fs.readFile('login.html', function(err, data){
 
         if(q.name === 'Nafeela' || q.name === 'Salman')
         {
-            var body = "Hii" + q.name+"</h1>" + data
+            var body = "<h1>Hii" + q.name +"</h1>"
         }
         else
         {
-            var body = "<h1>Enter username<h1>"
+            var body = data
         }
         res.write(body);
         res.end();
