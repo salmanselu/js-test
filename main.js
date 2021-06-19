@@ -7,7 +7,8 @@ var main = function(req, res)
 {
     fs.readFile('index.html', function(err, data){
 
-        if(q.name === 'Nafeela' || q.name === 'Salman'){
+        if(q.name === 'Nafeela' || q.name === 'Salman')
+        {
             var body = "Hii" + q.name+"</h1>" + data
         }
         else
