@@ -2,6 +2,8 @@ var http = require("http");
 var fs = require('fs');
 var url = require('url');
 
+global.task = ' ';
+global.body = ' ';
 var main = function(req, res)
 {
     fs.readFile('login.html', function(err, data){
@@ -9,17 +11,21 @@ var main = function(req, res)
         var q = url.parse(req.url, true).query;
         if(req.url === '/')
         {
-            var body = data
+            body += data
         }
-        else
+        else if(q.clear === 'clear')
         {
-            var body = "<h1>Hii " + q.name +"</h1>"
+            task = ' ';
+            body = ' ';
+            body += data;
         }
-       
-        
+        else if(q.task)
+        {
+            task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+Date()+'</a></p><br><hr>';
+            body = data + task;
+        }       
         res.write(body);
         res.end();
-        
     });
     
 }
