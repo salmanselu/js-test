@@ -22,7 +22,7 @@ var main = function(req, res)
         }
         else if(q.task)
         { 
-            var date = Date().toLocaleString('en-US', { timeZone: 'Asia/kolkata' });
+            var date = Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' });
             task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ date +'</a></p><br><hr>';
             body = data + task;
         }       
