@@ -23,7 +23,7 @@ var main = function(req, res)
         else if(q.task)
         { 
             var date = Date();
-            var hour = date.getHour();
+            var hour = (date.getHours()+5)%12;
             task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ String(hour) +'</a></p><br><hr>';
             body = data + task;
         }       
