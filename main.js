@@ -24,4 +24,4 @@ var main = function(req, res)
     
 }
 
-http.createServer(main).listen(process.env.PORT);
+http.createServer(main).listen(process.env.PORT || 4200);
