@@ -22,8 +22,8 @@ var main = function(req, res)
         }
         else if(q.task)
         { 
-            var date = Date().getHours() + 5;
-            task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ String(date) +'</a></p><br><hr>';
+           
+            task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ String(Date()) +'</a></p><br><hr>';
             body = data + task;
         }       
         res.write(body);
