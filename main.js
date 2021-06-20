@@ -7,11 +7,12 @@ global.body = ' ';
 var main = function(req, res)
 {
     fs.readFile('login.html', function(err, data){
-
+        
         var q = url.parse(req.url, true).query;
+        body = data + task;
         if(req.url === '/')
         {
-            body += data
+            
         }
         else if(q.clear === 'clear')
         {
