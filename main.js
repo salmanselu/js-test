@@ -21,8 +21,9 @@ var main = function(req, res)
             body += data;
         }
         else if(q.task)
-        {
-            task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+Date()+'</a></p><br><hr>';
+        { 
+            var date = Date().toLocaleString('en-US', { timeZone: 'Asia/kolkata' });
+            task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ date +'</a></p><br><hr>';
             body = data + task;
         }       
         res.write(body);
