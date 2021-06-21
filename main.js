@@ -9,7 +9,7 @@ var main = function(req, res)
     fs.readFile('login.html', function(err, data){
         
         var q = url.parse(req.url, true).query;
-        body = data + task;
+        body = task + data;
         if(req.url === '/')
         {
             
@@ -25,7 +25,7 @@ var main = function(req, res)
             var date = Date();
             
             task += '<p class="font-face: sans-serif;">'+ q.task +'<br><a style="color: gray;">'+ String(date) +'</a></p><br><hr>';
-            body = data + task;
+            body = task + data;
         }       
         res.write(body);
         res.end();
