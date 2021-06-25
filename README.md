@@ -2,4 +2,4 @@
 
 Just testing some js
 
-hosted at: https://salmanselu-testjs.herokuapp.com/
+hosted at: https://testing-jas.herokuapp.com/
