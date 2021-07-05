@@ -1,8 +1,21 @@
-
 {
-    "name": "test-app",
-    "description": "test application",
-    "main": "main.js",
-    "scripts": {"start": "node main.js"},
-    "engines":{"node":"14.x"}
+  "name": "js-test",
+  "version": "1.0.0",
+  "description": "Just testing some js",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js"
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salmanselu/js-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/salmanselu/js-test/issues"
+  },
+  "homepage": "https://github.com/salmanselu/js-test#readme"
 }

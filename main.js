@@ -1,14 +1,22 @@
 var http = require("http");
 
-var main = function(req, res)
-{
 var r;
 var g;
 var b;
-for(r=0;r<256;r++)
-for(g=0;g<256;g++)
-for(b=0;b<256;b++)
-res.write(`<div style="background-color:rgb(${r},${g},${b})"> </div>`);
+var rgb = '';
+for(r=0;r<200;r+=100)
+{
+    for(g=0;g<=200;g+=100)
+        for(b=0;b<=200;b+=100)
+            rgb += `<div style="background-color:rgb(${r},${g},${b})">&nbsp</div>`;
+    
 }
 
+var main = function(req, res)
+{
+
+res.write(rgb);
+res.end();
+
+}
 http.createServer(main).listen(process.env.PORT || 4200);
